@@ -1,0 +1,251 @@
+/* overall formatting */
+.overall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* front page jumbo */
+.Jumbo {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../assets/images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 50vh;
+  width: 100%;
+}
+/* "recent work jumbo" */
+.WorkJumbo {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background: none;
+  height: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 20px;
+  margin-bottom: 100px;
+  width: 40%;
+  border-bottom: solid;
+  border-color: grey;
+  border-width: 2px;
+}
+@media screen and (max-width: 1050px) {
+  .WorkJumbo {
+    margin-bottom: 50px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .overall h1 {
+    font-size: 40px;
+  }
+  .WorkJumbo {
+    width: 70%;
+    margin-bottom: 30px;
+  }
+  .WorkJumbo h2 {
+    font-size: 26px;
+  }
+}
+
+/* graphic cards on home page */
+.cards {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: top;
+  padding: 100px 0px;
+  width: 90%;
+}
+.graphicCardText {
+  max-width: 70%;
+}
+.artCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardImage {
+  width: 100px;
+}
+@media screen and (max-width: 1500px) {
+  .graphicCardText {
+    max-width: 90%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .cards h3 {
+    font-size: 22px;
+  }
+  .graphicCardText {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .cards h3 {
+    font-size: 16px;
+  }
+  .cards p {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .cards {
+    flex-direction: column;
+    padding: 0px 0px;
+  }
+  .artCard {
+    padding: 20px 0px;
+  }
+  .cardImage {
+    width: 70px;
+  }
+  .graphicCardText {
+    max-width: 50%;
+  }
+}
+
+/* project cards on list page */
+.projectCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+.projectCard {
+  width: 30%;
+  margin: 0px 20px;
+}
+.projectTitle {
+  font-size: 32px;
+}
+.projectSubTitle {
+  font-size: 14px;
+}
+.projectDescription {
+  margin-top: 20px;
+}
+@media screen and (max-width: 1500px) {
+  .projectTitle {
+    font-size: 22px;
+  }
+  .projectSubTitle {
+    font-size: 12px;
+  }
+  .readButton {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .projectTitle {
+    font-size: 20px;
+  }
+  .projectDescription {
+    font-size: 14px;
+  }
+  .readButton {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .projectCards {
+    justify-content: space-between;
+    margin-bottom: 50px;
+    padding: 0px 50px;
+  }
+  .projectCard {
+    width: 48%;
+    margin: 10px 0px 20px 0px;
+  }
+  .projectTitle {
+    font-size: 26px;
+  }
+  .projectSubTitle {
+    font-size: 14px;
+  }
+  .projectDescription {
+    font-size: 16px;
+  }
+  .readButton {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 770px) {
+  .projectCards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projectCard {
+    width: 100%;
+  }
+  .projectTitle {
+    font-size: 32px;
+  }
+  .projectSubTitle {
+    font-size: 16px;
+  }
+  .projectDescription {
+    font-size: 14px;
+  }
+  .readButton {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .projectCards {
+    padding: 0px 20px;
+  }
+  .projectTitle {
+    font-size: 18px;
+  }
+  .projectSubTitle {
+    font-size: 12px;
+  }
+  .projectDescription {
+    font-size: 14px;
+  }
+  .readButton {
+    font-size: 10px;
+  }
+}
+
+/* Jumbo on detailed page */
+.JumboDetail {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: white;
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("../assets/images/background.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  margin: 0;
+}
+.detailImg {
+  width: 50%;
+}
+/* project cards on detail page */
+.detailCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+@media screen and (max-width: 1050px) {
+  .detailCard {
+    flex-direction: column;
+  }
+  .detailImg {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 450px) {
+  .JumboDetail h1 {
+    font-size: 42px;
+  }
+}
