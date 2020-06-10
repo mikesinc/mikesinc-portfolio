@@ -10,7 +10,8 @@ class ProjectList extends React.Component {
   };
 
   componentDidMount() {
-    axios.get("http://127.0.0.1:8000/api/").then((res) => {
+    // axios.get("http://127.0.0.1:8000/api/").then((res) => {
+    axios.get("https://mikesinc-portfolio.herokuapp.com/api/").then((res) => {
       this.setState({
         projects: res.data,
       });
@@ -37,7 +38,13 @@ class ProjectList extends React.Component {
               src={require("../assets/images/001-null.png")}
               alt="UX"
             />
-            <CardBody style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <CardBody
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
               <h3>User Focused</h3>
               <p className="graphicCardText">
                 I design with the{" "}
@@ -53,7 +60,13 @@ class ProjectList extends React.Component {
               src={require("../assets/images/002-internet.png")}
               alt="Code"
             />
-            <CardBody style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <CardBody
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
               <h3>Your Content</h3>
               <p className="graphicCardText">
                 I handle all the{" "}
@@ -72,7 +85,13 @@ class ProjectList extends React.Component {
               src={require("../assets/images/004-paint.png")}
               alt="Art"
             />
-            <CardBody style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <CardBody
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
               <h3>Built to Impress</h3>
               <p className="graphicCardText">
                 I create websites that{" "}
@@ -87,7 +106,13 @@ class ProjectList extends React.Component {
               src={require("../assets/images/003-graph.png")}
               alt="Software"
             />
-            <CardBody style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+            <CardBody
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
               <h3>Modern Design</h3>
               <p className="graphicCardText">
                 I use the{" "}

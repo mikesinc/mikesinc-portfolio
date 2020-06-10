@@ -22,11 +22,14 @@ class ProjectDetail extends React.Component {
 
   componentDidMount() {
     const projectID = this.props.match.params.projectID;
-    axios.get(`http://127.0.0.1:8000/api/${projectID}`).then((res) => {
-      this.setState({
-        project: res.data,
+    // axios.get(`http://127.0.0.1:8000/api/${projectID}`).then((res) => {
+    axios
+      .get(`https://mikesinc-portfolio.herokuapp.com/api/${projectID}`)
+      .then((res) => {
+        this.setState({
+          project: res.data,
+        });
       });
-    });
   }
 
   render() {
