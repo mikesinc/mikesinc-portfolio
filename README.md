@@ -1,4 +1,4 @@
-My Portfolio Website
+Portfolio Website
 (React | JavaScript | CSS | Django | Python)
 
 A simple website built to showcase my recent portfolio of web development work.
