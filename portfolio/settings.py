@@ -15,7 +15,7 @@ SECRET_KEY = 'kx%cb5#q#_%b9g5h1o)@r)y)2t++vz53(@v^d(i@gf&_t)7m9x'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mikesinc-portfolio.herokuapp.com']
+ALLOWED_HOSTS = ['mikesinc-portfolio.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -118,7 +118,8 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static'),
-    os.path.join(BASE_DIR, 'build/static/media')
+    os.path.join(BASE_DIR, 'build/static/media'),
+    os.path.join(BASE_DIR, 'media')
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
