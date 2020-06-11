@@ -24,7 +24,12 @@ class ProjectDetail extends React.Component {
     const projectID = this.props.match.params.projectID;
     // axios.get(`http://127.0.0.1:8000/api/${projectID}`).then((res) => {
     axios
-      .get(`https://mikesinc-portfolio.herokuapp.com/api/${projectID}`)
+      .get(`https://mikesinc-portfolio.herokuapp.com/api/${projectID}`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        data: {},
+      })
       .then((res) => {
         this.setState({
           project: res.data,
