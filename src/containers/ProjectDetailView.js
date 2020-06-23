@@ -4,7 +4,6 @@ import "../styles/Project.css";
 import {
   Card,
   CardImg,
-  CardText,
   CardBody,
   CardTitle,
   CardSubtitle,
@@ -22,14 +21,8 @@ class ProjectDetail extends React.Component {
 
   componentDidMount() {
     const projectID = this.props.match.params.projectID;
-    // axios.get(`http://127.0.0.1:8000/api/${projectID}`).then((res) => {
     axios
-      .get(`https://mikesinc-portfolio.herokuapp.com/api/${projectID}`, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        data: {},
-      })
+      .get(`${process.env.REACT_APP_BACKEND_URL}/api/${projectID}`)
       .then((res) => {
         this.setState({
           project: res.data,
@@ -76,13 +69,12 @@ class ProjectDetail extends React.Component {
             <CardSubtitle className="projectSubTitle">
               Tech Stack: [ {this.state.project.techstack} ]
             </CardSubtitle>
-            <CardText className="projectDescription">
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: this.state.project.detailed_description,
-                }}
-              />
-            </CardText>
+            <div
+              className="projectDescription"
+              dangerouslySetInnerHTML={{
+                __html: this.state.project.detailed_description,
+              }}
+            />
             <a
               target="_blank"
               rel="noopener noreferrer"

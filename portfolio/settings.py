@@ -118,7 +118,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'build/static'),
-    os.path.join(BASE_DIR, 'build/static/media'),
     os.path.join(BASE_DIR, 'media')
 ]
 
@@ -137,4 +136,4 @@ REST_FRAMEWORK = {
 
 CORS_ORIGIN_ALLOW_ALL = True
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())

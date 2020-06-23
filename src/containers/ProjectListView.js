@@ -10,19 +10,11 @@ class ProjectList extends React.Component {
   };
 
   componentDidMount() {
-    // axios.get("http://127.0.0.1:8000/api/").then((res) => {
-    axios
-      .get("https://mikesinc-portfolio.herokuapp.com/api/", {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        data: {},
-      })
-      .then((res) => {
-        this.setState({
-          projects: res.data,
-        });
+    axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/`).then((res) => {
+      this.setState({
+        projects: res.data,
       });
+    });
   }
 
   render() {

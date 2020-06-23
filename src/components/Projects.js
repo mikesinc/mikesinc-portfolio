@@ -5,7 +5,6 @@ import {
   Button,
   CardImg,
   CardTitle,
-  CardText,
   Container,
   CardSubtitle,
   CardBody,
@@ -45,11 +44,10 @@ const Projects = ({ data }) => {
               <CardSubtitle className="projectSubTitle">
                 [ {project.techstack} ]
               </CardSubtitle>
-              <CardText className="projectDescription">
-                <div
-                  dangerouslySetInnerHTML={{ __html: project.description }}
-                />
-              </CardText>
+              <div
+                className="projectDescription"
+                dangerouslySetInnerHTML={{ __html: project.description }}
+              />
             </CardBody>
           </Card>
         );
