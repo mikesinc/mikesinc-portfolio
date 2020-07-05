@@ -10,6 +10,7 @@ class ProjectList extends React.Component {
   };
 
   componentDidMount() {
+    console.log(process.env.REACT_APP_BACKEND_URL);
     axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/`).then((res) => {
       this.setState({
         projects: res.data,
