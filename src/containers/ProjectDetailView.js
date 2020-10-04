@@ -36,9 +36,6 @@ class ProjectDetail extends React.Component {
         <Jumbotron className="JumboDetail" fluid>
           <Container fluid>
             <h1 className="display-2">MikeSinc | Portfolio</h1>
-            <p className="lead">
-              Welcome to my collection of web development work.
-            </p>
           </Container>
         </Jumbotron>
 
@@ -56,14 +53,11 @@ class ProjectDetail extends React.Component {
         <Card className="detailCard" outline color="white">
           <CardImg
             className="detailImg"
-            src={this.state.project.image}
+            src={require(`../assets/images/${this.props.match.params.projectID}.png`)}
             alt={this.state.project.title}
           />
           <CardBody>
-            <CardTitle
-              className="projectTitle"
-              style={{ paddingRight: "50px" }}
-            >
+            <CardTitle className="projectTitle">
               {this.state.project.title}
             </CardTitle>
             <CardSubtitle className="projectSubTitle">
@@ -80,7 +74,9 @@ class ProjectDetail extends React.Component {
               rel="noopener noreferrer"
               href={this.state.project.website_link}
             >
-              <Button>View live site!</Button>
+              <Button style={{ padding: "10px", marginTop: "20px" }} color="warning">
+                View live site!
+              </Button>
             </a>
           </CardBody>
         </Card>

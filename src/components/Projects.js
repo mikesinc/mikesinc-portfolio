@@ -21,7 +21,7 @@ const Projects = ({ data }) => {
             className="projectCard"
             style={{ borderWidth: "1px", borderColor: "grey" }}
           >
-            <CardImg top width="100%" src={project.image} alt={project.title} />
+            <CardImg top width="100%" src={require(`../assets/images/${project.id}.png`)} alt={project.title} />
             <CardBody>
               <div
                 style={{
@@ -35,7 +35,7 @@ const Projects = ({ data }) => {
                   <Button
                     className="readButton"
                     style={{ width: "100%" }}
-                    color="secondary"
+                    color="warning"
                   >
                     Read more
                   </Button>

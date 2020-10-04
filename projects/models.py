@@ -6,7 +6,7 @@ class Project(models.Model):
     description = models.TextField()
     detailed_description = models.TextField()
     techstack = models.CharField(max_length=50)
-    image = models.ImageField(blank=True, null=True)
+    # image = models.ImageField(blank=True, null=True)
     website_link = models.CharField(max_length=50)
 
     def __str__(self):
